@@ -1,0 +1,21 @@
+[submodule "submodules/goals"]
+	path = submodules/goals
+	url = https://github.com/humm/goals
+[submodule "submodules/robots"]
+	path = submodules/robots
+	url = https://github.com/humm/robots
+[submodule "submodules/boxsim"]
+	path = submodules/boxsim
+	url = https://github.com/humm/boxsim
+[submodule "submodules/playbox"]
+	path = submodules/playbox
+	url = https://github.com/humm/playbox
+[submodule "submodules/sockit"]
+	path = submodules/sockit
+	url = https://github.com/humm/sockit
+[submodule "submodules/models"]
+	path = submodules/models
+	url = https://github.com/humm/models
+[submodule "submodules/toolbox"]
+	path = submodules/toolbox
+	url = https://github.com/humm/toolbox
