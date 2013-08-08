@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -l walltime=5:00:00
+#PBS -l nodes=1
+#PBS -l pmem=1gb
+
+#PBS -e /home/fbenurea/io/$configfile.err
+#PBS -o /home/fbenurea/io/$configfile.out
+
+module load lapack/gcc/64/3.3.0
+module load acml/gcc/64/4.4.0
+
+pythonbrew switch 2.7.3;
+
+cd ~/research/l2l/exp/l2l
+python run.py $configfile
