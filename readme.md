@@ -13,15 +13,21 @@ This software is placed under the [OpenScience license](http://fabien.benureau.c
 ## Installation
 
 1. Install pypubsub, scipy, treedict, cython, pandas and [eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page).
-`pip install pypubsub scipy treedict cython pandas`
+    * `pip install pypubsub scipy treedict cython pandas`
 1. Get the code
-1. Install
+1. Install submodules 
+	* `git submodule init`
+    * `git submodule update`
+	* install each submodule according to its `readme.md`. 
 
 ## Usage
 
-1. Get the code
-2. Edit paths in file `explib/run/paths.py` to suit your folder structure, and create each of the listed folde
-3. Go to `exp/l2l`
-4. Run `l2l_missing.py -r`. This will generate and display the file `missing.sh`. Assume  
+1. Edit paths in file `explib/run/paths.py` to suit your folder structure, and create each of the listed folde
+1. Go to `exp/l2l`
+1. Run `./l2l_missing.py -r`. This will generate and display the file `missing.sh`. This is the list of command that need to be run. 
+1. Run `./l2l_run.py`.
+1. Wait for all command to finish (it may take a month if run sequentially: use a cluster, the code automatically switches to use the `qsub` command if it exits. You may also want to limit the number of time the experiment is reapeated (default 20))
+1. Redo step 3 and 4 until `missing.sh` is empty.
+1. Run `./l2l_graphs.py` 
 
 Although some care has been taken to make the code usable, it might not be. Don't hesitate to submit an issue or make a pull request.
